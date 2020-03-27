@@ -1,5 +1,5 @@
 # Generator for the rows of sum s which are smaller that maxrow
- def choose_one_row(s, maxrow):
+ def choose_one_row(s, maxrow): - здесь нарушен отступ
      if not maxrow:
          if s == 0: yield []
          else: return
@@ -21,11 +21,11 @@
      # try if allready computed
      try:
          return memo[rsum, colsum]
-     except KeyError:
+     except KeyError: - это лишний текст
          pass
      # apply the recursive formula
      res = 0
-     for row in choose_one_row(rsum[0], colsum):
+     for row in choose_one_row(rsum[0], colsum): - здесь нарушен отступ
          res += nmat(rsum[1:], tuple(a - b for a, b in zip(colsum, row)))
      # memoize the result
      memo[(tuple(rsum), tuple(colsum))] = res
